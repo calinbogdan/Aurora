@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5998ff"
+    tools:context="thundrware.com.aurora.MainActivity">
+
+    <TextView
+        android:id="@+id/currentWeatherTemperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/currentWeatherSummaryLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:shadowColor="@color/textShadowColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="__"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="100sp"/>
+
+    <TextView
+        android:id="@+id/degreesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/currentWeatherTemperatureLabel"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/currentWeatherTemperatureLabel"
+        android:shadowColor="@color/textShadowColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="°"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="36sp"/>
+
+    <TextView
+        android:id="@+id/currentWeatherSummaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="italic"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentWeatherTemperatureLabel"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dailyForecastRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
