@@ -1,10 +1,14 @@
 package thundrware.com.aurora.models;
 
-public class Hour {
+import android.support.annotation.NonNull;
+
+public class Hour implements Comparable<Hour> {
+    private String mIcon;
     private double mTemperature;
     private long mTime;
     private double mPrecipitationProbability;
     private double mApparentTemperature;
+    private String mTimezone;
 
     public double getTemperature() {
         return mTemperature;
@@ -36,5 +40,32 @@ public class Hour {
 
     public void setApparentTemperature(double apparentTemperature) {
         mApparentTemperature = apparentTemperature;
+    }
+
+    public String getIcon() {
+        return mIcon;
+    }
+
+    public void setIcon(String icon) {
+        mIcon = icon;
+    }
+
+    public int getIconId() {
+        return Forecast.getIconId(mIcon);
+    }
+
+    public String getTimezone() {
+        return mTimezone;
+    }
+
+    public void setTimezone(String timezone) {
+        mTimezone = timezone;
+    }
+
+    @Override
+    public int compareTo(@NonNull Hour hour) {
+        Long time1 = mTime;
+        Long timeToCompare = hour.getTime();
+        return time1.compareTo(timeToCompare);
     }
 }

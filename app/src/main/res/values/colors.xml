@@ -4,5 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="textShadowColor">#505050</color>
+    <color name="grayTextShadowColor">#9f9f9f</color>
     <color name="primaryTextColor">#F9F9F9</color>
+    <color name="plainWhite">#FFFFFF</color>
+    <color name="lessPlainerWhite">#80FFFFFF</color>
+    <color name="weatherIconColorOutline">@color/plainWhite</color>
+    <color name="mainActivityBackground">#1f3e7a</color>
 </resources>

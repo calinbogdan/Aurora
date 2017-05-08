@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
     <TextView
         android:id="@+id/dailyForecastMinTemperatureLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/dailyForecastDayNameLabel"
+        android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:text="55"
+        android:textAllCaps="true"
+        android:textColor="@color/lessPlainerWhite"
         android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/dailyForecastMaxTemperatureLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_toStartOf="@+id/dailyForecastMinTemperatureLabel"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:text="55"
         android:textColor="@android:color/white"
         android:textSize="16sp"/>
@@ -39,8 +41,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp"
-        android:text="sunday"/>
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="sunday"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/dailyForecastIconView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/cast_abc_scrubber_control_off_mtrl_alpha"/>
 </RelativeLayout>

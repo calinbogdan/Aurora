@@ -17,6 +17,10 @@ public class MyApplication extends Application {
         MyApplication.context = getApplicationContext();
     }
 
+    public static Context getContext() {
+        return context;
+    }
+
     public static boolean isConnectedToTheInternet() {
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
